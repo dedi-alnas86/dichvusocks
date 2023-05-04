@@ -22,6 +22,7 @@
 							<textarea class="form-control" id="input-data" rows="5" placeholder="Enter data dichvusocks"></textarea>
 						</div>
 						<button type="button" class="btn btn-primary" onclick="parseData()">Parse Data</button>
+						 <button type="button" class="btn btn-secondary" onclick="clearData()">Clear</button>
 						<hr>
 						<h3>Output:</h3>
 						<ul class="list-group" id="output-list"></ul>
@@ -69,6 +70,11 @@
 			document.execCommand("copy");
 			alert("data sudah dicopy");
 		}
+		 function clearData() {
+		document.getElementById("input-data").value = "";
+		document.getElementById("output-list").innerHTML = "";
+		document.getElementById("output-text").value = "";
+	}
 	</script>
 </body>
 </html>
